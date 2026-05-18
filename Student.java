@@ -1,16 +1,7 @@
-/**
- * ============================================================
- *   CodSoft Java Development Internship — Task 5
- *   File    : Student.java
- *   Author  : [Your Name]
- *   Purpose : Represents an individual student with all
- *             relevant attributes, grade logic, and
- *             CSV serialization for file storage.
- * ============================================================
- */
+
 public class Student {
 
-    // ─── Attributes ──────────────────────────────────────────────────────────────
+    // ─── Attributes 
     private int    rollNumber;
     private String name;
     private int    age;
@@ -23,7 +14,7 @@ public class Student {
     private String grade;       // auto-computed from marks
     private String status;      // PASS / FAIL
 
-    // ─── Constructor ─────────────────────────────────────────────────────────────
+    // ─── Constructor 
     /**
      * Creates a Student with all details.
      * Grade and status are automatically computed from marks.
@@ -52,7 +43,7 @@ public class Student {
         setMarks(marks);   // computes grade + status automatically
     }
 
-    // ─── Grade & Status Logic ────────────────────────────────────────────────────
+    // ─── Grade & Status Logic 
     /**
      * Computes grade based on marks (out of 100).
      *
@@ -80,7 +71,7 @@ public class Student {
         return marks >= 40 ? "PASS" : "FAIL";
     }
 
-    // ─── Getters ─────────────────────────────────────────────────────────────────
+    // ─── Getters 
     public int    getRollNumber() { return rollNumber; }
     public String getName()       { return name;       }
     public int    getAge()        { return age;        }
@@ -93,7 +84,7 @@ public class Student {
     public String getGrade()      { return grade;      }
     public String getStatus()     { return status;     }
 
-    // ─── Setters ─────────────────────────────────────────────────────────────────
+    // ─── Setters 
     public void setRollNumber(int rollNumber)   { this.rollNumber = rollNumber; }
     public void setName(String name)            { this.name = name;             }
     public void setAge(int age)                 { this.age = age;               }
@@ -113,7 +104,7 @@ public class Student {
         this.status = computeStatus(marks);
     }
 
-    // ─── Display Methods ─────────────────────────────────────────────────────────
+    // ─── Display Methods 
     /**
      * Prints a full, formatted student profile card to the console.
      */
@@ -148,7 +139,7 @@ public class Student {
         );
     }
 
-    // ─── CSV Serialization (for File Storage) ────────────────────────────────────
+    // ─── CSV Serialization (for File Storage) 
     /**
      * Converts the student object to a CSV string for saving to a file.
      * Format: roll,name,age,gender,email,phone,course,section,marks
@@ -186,7 +177,7 @@ public class Student {
         }
     }
 
-    // ─── Equality Check ──────────────────────────────────────────────────────────
+    // ─── Equality Check 
     /**
      * Two students are considered equal if they share the same roll number.
      */
@@ -203,7 +194,7 @@ public class Student {
         return Integer.hashCode(rollNumber);
     }
 
-    // ─── Main (Quick Test) ───────────────────────────────────────────────────────
+    // ─── Main (Quick Test) 
     /**
      * Quick demo — remove this main() when integrating with
      * StudentManagementSystem.java
